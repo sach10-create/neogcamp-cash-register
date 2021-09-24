@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css" class="rel">
 </head>
 <body>
-    <div class="container">Cash Register</div> 
+    <div class="container">
     <h1 class="heading">Cash Register Manager</h1>
     <p class="desp">Enter the bill amount and cash paid by the customer and find out the number of minimun notes to be returned.</p>
     <label for="billAmount">Bill Amount : </label><br>
@@ -17,7 +17,7 @@
     <input type="text" class="cashGiven"/><br><br>
     <button id="checkButton">Calculate</button>
     <p id="error-msg"></p>
-    <table class="outputTable">
+    <table class="outputTable" align="center">
         <caption>Change to be returned</caption><br><br>
         <tr>
             <th> No. of notes </th>
@@ -40,7 +40,7 @@
             <td>1</td>
         </tr>
     </table>    
-        
+      </div>
     <script src="app.js"></script>   
 </body>
 </html>

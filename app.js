@@ -8,11 +8,9 @@ const noOfNotes = document.querySelectorAll(".notes");
 checkButton.addEventListener("click", function validateBill() {
      errorMsg.style.display = "none";
     if (billAmount.value > 0) {
-        // console.log(billAmount.value)
-        if (cashGiven.value > billAmount.value) {
+        if (Number(cashGiven.value) > Number(billAmount.value)) {
             var amountToBeReturned = cashGiven.value - billAmount. value;
             calculateChange(amountToBeReturned);
-
         } else {
             makeErrorMessage("Give more Cash!!!");
         }
@@ -22,7 +20,6 @@ checkButton.addEventListener("click", function validateBill() {
 });
 
 function calculateChange(amountToBeReturned){
-    console.log("here");
     for(var i =0 ; i<notesArray.length ; i++){
         const numberOfnotes = Math.trunc
         (amountToBeReturned / notesArray[i]);
